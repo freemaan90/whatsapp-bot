@@ -1,7 +1,7 @@
 import whatsappService from "./whatsappService.js";
 import { normalizePhoneNumber } from "../../utils/index.js";
 import appendToSheets from "./googleSheetsService.js";
-import openAiService from "./openAiService.js";
+import geminiAiService from "./geminiAiService.js";
 
 class MessageHandler {
   constructor() {
@@ -225,7 +225,7 @@ class MessageHandler {
     ];
 
     if (state.step === "question") {
-      response = await openAiService(message);
+      response = await geminiAiService(message);
     }
 
     delete this.assistandState[to];
