@@ -10,4 +10,5 @@ export default {
   PORT: process.env.PORT || 3000,
   CHATGPT_API_KEY: process.env.CHATGPT_API_KEY,
   BASE_URL: process.env.BASE_URL,
+  GOOGLE_CREDENTIALS: process.env.GOOGLE_CREDENTIALS
 };
