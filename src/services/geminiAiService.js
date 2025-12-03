@@ -5,9 +5,8 @@ const geminiAiService = async (message) => {
   // Inicializar cliente Gemini
   const genAI = new GoogleGenerativeAI(config.GEMINI_API_KEY);
   const model = genAI.getGenerativeModel({
-    model: "gemini-1.5-flash",
-    systemInstruction:
-      "Comportarte como un veterinario, responde lo más simple posible en texto plano, como si fuera WhatsApp. No saludes ni generes conversación, solo responde a la pregunta.",
+    model: "gemini-3-pro-preview",
+    contents: "Comportarte como un veterinario, responde lo más simple posible en texto plano, como si fuera WhatsApp. No saludes ni generes conversación, solo responde a la pregunta.",
   });
   try {
     const chat = model.startChat({
